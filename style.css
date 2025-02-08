@@ -1,0 +1,365 @@
+.template {
+    font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans as the primary font */
+    margin: 0;
+    padding: 0;
+    background-color: white /* rgb(214, 236, 254);*/
+}
+
+
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distributes space between logo and links */
+    align-items: center; /* Center items vertically */
+    background-color: rgb(251, 251, 251);
+    padding: 20px; /* Adjust the padding to change the navbar thickness */
+    position: relative; /* Set position to relative for absolute positioning of children */
+    z-index: 1; /* Ensure navbar is above other content */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center; /* Vertically center the links */
+    gap: 20px; /* Consistent spacing between links */
+}
+
+.nav-links a {
+    display: inline-block; /* Allows padding and margin, but keeps inline flow */
+    color: #333; /* Darker, more professional text color */
+    padding: 8px 12px; /* Reduced padding for a more compact look */
+    font-size: 16px; /* More standard font size */
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 600; /* Slightly bolder font-weight */
+    border-radius: 4px; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+    color: #007bff; /* Example hover color */
+}
+
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 679px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start; /* Align to the left */
+        width: 100%;
+        gap: 10px;
+    }
+    .nav-links a {
+        display: block; /* Full-width links on smaller screens */
+        width: 100%;
+        text-align: center; /* Center text within links */
+        padding: 10px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+
+    .logo { /* Target the logo container, not just the image */
+        margin-bottom: 10px;
+        text-align: center; /* Center the image within the container */
+        width: 100%; /* Make sure logo container takes full width*/
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+
+}
+
+
+
+
+
+/* Media query for smaller screens */
+@media (min-width: 680px) and (max-width: 830px) { /* Example breakpoint for medium screens */
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start; /* Align to the left */
+        width: 100%;
+        gap: 10px;
+    }
+    .nav-links a {
+        display: block; /* Full-width links on smaller screens */
+        width: 100%;
+        text-align: center; /* Center text within links */
+        padding: 10px;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+
+
+
+
+
+.logo img {
+    max-height: 100px; /* Or whatever height you want */
+    width: auto;
+}
+
+
+
+
+body {
+    margin: 0; /* Remove default body margins */
+    padding: 0;
+  }
+  
+.full-page-image {
+    width: 100vw; /* Viewport width */
+    height: 100vh; /* Viewport height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    display: block; /* Prevents a small space at the bottom */
+}
+
+
+
+
+.teal-box {
+    background-color: rgb(33, 81, 180);
+    color: white; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 20px 0; /* Add some vertical padding */
+    width: 100%; /* Make it span the entire width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-size: 1.4em; /* Adjust this value */
+}
+
+.teal-box hr {
+    border-top: 1px solid white; /* Style the white line */
+    width: 50%; /* Adjust line width if needed */
+    margin: 10px auto; /* Center the line */
+}
+
+
+
+
+.about-content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    /*max-width: 800px; /* Set a maximum width for better readability */
+    /*margin: 0 auto; /* Center the content on the page */
+}
+
+.section {
+    margin-bottom: 30px; /* Add spacing between sections */
+}
+
+.section h2 {
+    font-size: 1.8em; /* Adjust header size as needed */
+    margin-bottom: 10px; /* Add spacing below the header */
+}
+
+.section hr {
+    border-top: 2px solid #ccc; /* Style the horizontal line */
+    margin-bottom: 15px; /* Add spacing below the line */
+    width: 30%; /* Adjust the line width */
+}
+
+.section p, .section ul {
+    line-height: 1.6; /* Improve line spacing for readability */
+}
+.section ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.product-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.product {
+    position: relative;
+    width: 100%; /* Images take full width */
+    max-width: 1200px; /* Optional: Set a maximum width */
+    margin-bottom: 20px;
+}
+
+.product img {
+    display: block; /* Prevents a small gap below the image */
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.product:hover img {
+    /*transform: scale(1.1); /* Slightly zoom in on hover */
+    opacity: 0.7; /* Optional: slightly reduce image opacity */
+}
+
+.product-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Important: Let width adjust to content */
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0.5em 1em; /* Use em for padding relative to font size */
+    font-size: calc(2vw + 2vh); /* Dynamic font size */
+    transition: transform 0.3s ease;
+}
+
+.product:hover .product-label {
+    opacity: 0.0; /* Hides the label on hover */
+}
+
+.product-blurb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Same gray as label */
+    color: white;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Crucial: Stack blurb content vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    box-sizing: border-box; /* Include padding in width/height calculation */
+    text-align: center;
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Add a media query to change justify-content when scrolling is needed */
+@media (max-width: 830px) { /* Adjust 300px as needed */
+    .product-blurb {
+        justify-content: flex-start; /* Align to top when scrolling */
+    }
+}
+
+.product:hover .product-blurb {
+    opacity: 1; /* Show blurb on hover */
+}
+
+.product-blurb .blurb-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-blurb .blurb-content > * { /* Target direct children of .blurb-content */
+    margin-bottom: 10px; /* Add spacing between elements */
+}
+
+.product-blurb .blurb-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.product-blurb .blurb-content b {
+    display: block; /* Make bold text a block element */
+    font-weight: bold; /* Ensure it's actually bold */
+}
+
+
+
+
+
+
+.contact-content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.contact-message {
+    margin-top: 50px; /* Adjust this value as needed */
+    text-align: left; /* Align message text to the left */
+    margin-bottom: 30px; /* Add space below the message */
+    font-size: 1.1em;
+}
+
+.contact-message h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-top: 2px solid #ccc;
+    margin: 30px 0; /* Add top and bottom margin to the line */
+}
+
+.contact-info {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    gap: 20px; /* Add spacing between info items */
+    font-size: 1.1em;
+}
+
+.info-item {
+    text-align: left; /* Left the contact information */
+}
+
+.info-item strong {
+    font-weight: bold;
+}
+.full-page-image{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+textarea {
+    width: calc(50% - 12px);
+    height: 150px;
+    padding: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  .form-group{
+      margin-bottom: 10px;
+  }
+
+
+
+
+
+  .footer-text {
+    margin-left: 20px; /* Adjust this value as needed */
+}
+
+footer {
+    height: 60px; /* Adjust this value as needed */ 
+}
